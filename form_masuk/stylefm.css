@@ -1,0 +1,88 @@
+/*Navbar*/
+.navbar {
+  background-color: #08caef;
+}
+
+.nav-item {
+  color: #0b0c3a;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#main_form {
+  background-image: url('../assets/bg_fmasuk.jpg'); /* Ganti dengan path gambar background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem; /* Tambahan jarak dari tepi layar */
+}
+
+/* Form Container */
+.form-masuk-container {
+  background: rgba(255, 255, 255, 0.85); /* Transparansi putih */
+  max-width: 500px; /* Lebih besar */
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+/* Garis di sekitar "or" */
+hr {
+  border: none;
+  border-top: 1px solid black; /* Warna hitam untuk garis */
+  margin: 0;
+}
+
+span {
+  font-weight: 500;
+  color: #333; /* Warna teks "or" */
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+}
+/* General Reset */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Login Container */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Form Section */
+.form-section {
+  flex: 1;
+  background-color: #ffffff;
+  color: #0b0c3a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-label {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.custom-input {
+  border: 2px solid #00c2f6;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 14px;
+}
+/* Tambahkan ke stylefm.css */
+#login-section,
+#signin-section {
+  display: none;
+}
