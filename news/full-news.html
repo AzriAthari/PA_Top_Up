@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="stylen.css" />
   </head>
   <body>
-    <!--Navbar-->
     <nav class="navbar navbar-expand-lg shadow fixed-top">
       <div class="container">
         <img src="../assets/logo_web/logo_nama.png" alt="logo" class="navbar-brand" width="107.06" height="45" />
@@ -18,9 +17,26 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="../homepage/homepage.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link active" href="../news/news.html">News</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../homepage/indext.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../homepage/indext.html#news">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Calculator</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../calcu_wr/calculatorwr.html">Calculator Winrate</a></li>
+                <li><a class="dropdown-item" href="../calcu_mw/calculatormw.html">Calculator Magic Wheel</a></li>
+                <li><a class="dropdown-item" href="../calcu_zc/calculatorzc.html">Calculator Zodiac</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../form_masuk/masuk.html"> Masuk<i class="bi bi-box-arrow-in-right" style="color: #0b0c3a"></i> </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -28,11 +44,14 @@
 
     <!-- Back to News Button -->
     <div class="container mt-5 pt-5">
-      <a class="btn btn-outline-primary" href="news.html"> <i class="bi bi-arrow-left"></i> Back to News </a>
+      <a href="../homepage/indext.html#news" type="button" class="btn btn-info border-dark">Kembali ke Home</a>
+    </div>
+    <div class="container mt-1 pt-1">
+      <a href="../news/news.html" type="button" class="btn btn-info border-dark">Kembali ke Berita Selengkapnya</a>
     </div>
 
     <!-- Full News Section -->
-    <div class="container my-5 pt-5" id="newsContent">
+    <div class="container my-5 pt-1" id="newsContent">
       <!-- Content will be populated by JavaScript -->
     </div>
 
@@ -45,55 +64,56 @@
       }
 
       // Get the news ID from the URL
-      const newsId = getQueryParam("news");
+      const newsId = getQueryParam('news');
 
       // News content data
       const newsData = {
         1: {
-          title: "HONKAI STAR RAIL COLLABORATION WITH HONKAI IMPACT",
-          image: "../assets/honkai x honkai.jpg",
+          title: 'HONKAI STAR RAIL COLLABORATION WITH HONKAI IMPACT',
+          image: '../assets/news/honkai x honkai.jpg',
           content:
-            "Dalam kolaborasi epik ini, Honkai Star Rail dan Honkai Impact bersatu untuk memberikan pengalaman bermain yang luar biasa bagi para penggemar. Dengan karakter ikonik dari kedua game, event ini akan berlangsung mulai 12 Maret 2024. Pemain dapat menikmati misi kolaborasi baru, skin eksklusif, dan banyak hadiah menarik. Pastikan untuk tidak melewatkan kesempatan langka ini untuk menjelajahi dunia Honkai yang lebih luas!",
+            'Dalam kolaborasi epik ini, Honkai Star Rail dan Honkai Impact bersatu untuk memberikan pengalaman bermain yang luar biasa bagi para penggemar. Dengan karakter ikonik dari kedua game, event ini akan berlangsung mulai 12 Maret 2024. Pemain dapat menikmati misi kolaborasi baru, skin eksklusif, dan banyak hadiah menarik. Pastikan untuk tidak melewatkan kesempatan langka ini untuk menjelajahi dunia Honkai yang lebih luas!',
         },
         2: {
-          title: "Kolaborasi Free Fire x Blue Lock? Wow!!",
-          image: "../assets/ff x blu luk.jpeg",
-          content: "Informasi tentang kolaborasi antara Free Fire dan Blue Lock yang menghadirkan pengalaman unik bagi para pemain. Jangan lewatkan kesempatan untuk mendapatkan item eksklusif!",
+          title: 'Kolaborasi Free Fire x Blue Lock? Wow!!',
+          image: '../assets/news/ff x blu luk.jpeg',
+          content: 'Informasi tentang kolaborasi antara Free Fire dan Blue Lock yang menghadirkan pengalaman unik bagi para pemain. Jangan lewatkan kesempatan untuk mendapatkan item eksklusif!',
         },
         3: {
-          title: "Tanpa Kesulitan, RRQ Hoshi Berhasil Raih Kemenangan Pertama di M6",
-          image: "../assets/rrq.jpg",
-          content: "RRQ Hoshi meraih kemenangan 1-0 atas Keep Best Gaming pada laga perdana mereka di M6 World Championship, yang berlangsung di Axiata Arena, Kuala Lumpur, pada Kamis (28/11/2024). Dengan hasil ini, RRQ Hoshi melangkah ke babak kedua Swiss Stage, sementara Keep Best Gaming masih memiliki peluang untuk lolos ke babak playoff. Dalam pertandingan ini, RRQ Hoshi memilih draft hero Chou, Cici, Fredrinn, Bruno, dan Zhuxin, sementara Keep Best Gaming memilih Novaria, Suyou, Belerick, Beatrix, dan Hilda. Skylar yang menggunakan Bruno membuka pertandingan dengan first blood setelah berhasil menumbangkan Belerick pada menit ke-3. RRQ kemudian semakin dominan setelah pertarungan memperebutkan Turtle pada menit ke-4.",
+          title: 'Tanpa Kesulitan, RRQ Hoshi Berhasil Raih Kemenangan Pertama di M6',
+          image: '../assets/news/rrq.jpg',
+          content:
+            'RRQ Hoshi meraih kemenangan 1-0 atas Keep Best Gaming pada laga perdana mereka di M6 World Championship, yang berlangsung di Axiata Arena, Kuala Lumpur, pada Kamis (28/11/2024). Dengan hasil ini, RRQ Hoshi melangkah ke babak kedua Swiss Stage, sementara Keep Best Gaming masih memiliki peluang untuk lolos ke babak playoff. Dalam pertandingan ini, RRQ Hoshi memilih draft hero Chou, Cici, Fredrinn, Bruno, dan Zhuxin, sementara Keep Best Gaming memilih Novaria, Suyou, Belerick, Beatrix, dan Hilda. Skylar yang menggunakan Bruno membuka pertandingan dengan first blood setelah berhasil menumbangkan Belerick pada menit ke-3. RRQ kemudian semakin dominan setelah pertarungan memperebutkan Turtle pada menit ke-4.',
         },
         4: {
-          title: "Wtf happened in Mizuki event???",
-          image: "../assets/juki.jpg",
-          content: "Juki ternyata seorang laki-laki??!!!.",
+          title: 'Wtf happened in Mizuki event???',
+          image: '../assets/news/juki.jpg',
+          content: 'Juki ternyata seorang laki-laki??!!!.',
         },
         5: {
-          title: "Siap Menemani Hari Harimu, Tanggal Rilis TOKIMEKI Roadmap to the Future Resmi Diumumkan",
-          image: "../assets/loplep.jpg",
+          title: 'Siap Menemani Hari Harimu, Tanggal Rilis TOKIMEKI Roadmap to the Future Resmi Diumumkan',
+          image: '../assets/news/loplep.jpg',
           content:
-            "Game visual novel Love Live! Nijigasaki High School Idol Club: TOKIMEKI Roadmap to the Future akan segera diluncurkan untuk PC melalui Steam bersamaan dengan versi Nintendo Switch yang telah diumumkan sebelumnya pada tanggal 24 April 2025, publisher Bushiroad Games dan developer HuneX mengumumkan perilisan ini melalui sebuah trailer.",
+            'Game visual novel Love Live! Nijigasaki High School Idol Club: TOKIMEKI Roadmap to the Future akan segera diluncurkan untuk PC melalui Steam bersamaan dengan versi Nintendo Switch yang telah diumumkan sebelumnya pada tanggal 24 April 2025, publisher Bushiroad Games dan developer HuneX mengumumkan perilisan ini melalui sebuah trailer.',
         },
         6: {
-          title: "Steam Autumn Sale Sedang Berlangsung! Metaphor: ReFantazio dan Sonic x Shadow Generations Dapat Diskon Besar",
-          image: "../assets/atlus.jpg",
+          title: 'Steam Autumn Sale Sedang Berlangsung! Metaphor: ReFantazio dan Sonic x Shadow Generations Dapat Diskon Besar',
+          image: '../assets/news/atlus.jpg',
           content:
-            "SEGA bersama ATLUS dengan senang hati mengumumkan bahwa beberapa game akan mendapatkan diskon pada Steam Autumn Sale kali ini! Game yang akan masuk nominasi GOTY yaitu Metaphor: ReFantazio, juga akan mendapatkan diskon walaupun baru saja dirilis bulan lalu.Tak ketinggalan Sonic x Shadow Generations juga akan kena diskon untuk kalian yang mau ngerasain serunya petualangan Sonic dan Shadow. Persona 3 Reload yang dirilis tahun ini juga menambah lini game ATLUS yang akan mendapatkan diskon.",
+            'SEGA bersama ATLUS dengan senang hati mengumumkan bahwa beberapa game akan mendapatkan diskon pada Steam Autumn Sale kali ini! Game yang akan masuk nominasi GOTY yaitu Metaphor: ReFantazio, juga akan mendapatkan diskon walaupun baru saja dirilis bulan lalu.Tak ketinggalan Sonic x Shadow Generations juga akan kena diskon untuk kalian yang mau ngerasain serunya petualangan Sonic dan Shadow. Persona 3 Reload yang dirilis tahun ini juga menambah lini game ATLUS yang akan mendapatkan diskon.',
         },
       };
 
       // Display the selected news
       if (newsData[newsId]) {
         const news = newsData[newsId];
-        document.getElementById("newsContent").innerHTML = `
+        document.getElementById('newsContent').innerHTML = `
           <h2>${news.title}</h2>
           <img src="${news.image}" class="img-fluid mb-4" alt="${news.title}" />
           <p>${news.content}</p>
         `;
       } else {
-        document.getElementById("newsContent").innerHTML = "<p>Berita tidak ditemukan.</p>";
+        document.getElementById('newsContent').innerHTML = '<p>Berita tidak ditemukan.</p>';
       }
     </script>
 

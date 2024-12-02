@@ -32,7 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 document.getElementById("submitBtn").addEventListener("click", () => {
   // Data dari form
-  const gameName = "Mobile Legend";
+// Ambil elemen HTML berdasarkan ID
+  const gameName = document.getElementById("nama-game").textContent;
   const id = document.getElementById("id").value.trim();
   const server = document.getElementById("server").value.trim();
   const nominal = document.getElementById("nominal").selectedOptions[0].text;
@@ -48,7 +49,7 @@ document.getElementById("submitBtn").addEventListener("click", () => {
   }
 
   // Nomor WhatsApp admin (ganti dengan nomor admin)
-  const adminNumber = "6285834427332"; // Format: tanpa "+" dan dengan kode negara
+  const adminNumber = "6281216198174"; // Format: tanpa "+" dan dengan kode negara
 
   // Template pesan WhatsApp
   const message =
